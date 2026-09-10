@@ -49,7 +49,7 @@ public class Coin {
         }
     }
 
-    void showStats() {
+    void getResult() {
         System.out.println("Name: " + name);
         System.out.println("Chance: " + chance);
         System.out.println("Value: " + value);
