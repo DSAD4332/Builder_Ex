@@ -1,5 +1,5 @@
-public class PrimeMechBuilder implements MechBuilder {
-    private Mech mech = new Mech();
+public class StandardMechBuilder implements MechBuilder {
+    private final Mech mech = new Mech();
 
     @Override
     public void setName(String name) {
@@ -10,8 +10,8 @@ public class PrimeMechBuilder implements MechBuilder {
         mech.setType(type);
     }
     @Override
-    public void setSquadName(String squadName) {
-        mech.setSquadName(squadName);
+    public void setSquadron(String squadron) {
+        mech.setSquadron(squadron);
     }
     @Override
     public void setHealth(int health) {

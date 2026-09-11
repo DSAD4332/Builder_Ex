@@ -1,16 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        Coin penny = new Coin.Builder("Penny", 0.8, 1)
-                .setDescription("Regular Penny")
-                .build();
-        penny.getResult();
+        SquadronLoadout flame = new FlameBehemoths().getLoadout();
+        SquadronLoadout steel = new SteelJudoka().getLoadout();
+        SquadronLoadout cataclysm = new Cataclysm().getLoadout();
 
         MechDirector director = new MechDirector();
 
-        MechBuilder builder = new PrimeMechBuilder();
-
-        Mech computer = director.construct(builder);
-
-        System.out.println(computer);
+        Mech FlamePrimeMech = director.construct(new StandardMechBuilder(), flame, MechType.PRIME);
+        Mech SteelRangedMech = director.construct(new StandardMechBuilder(), steel, MechType.RANGED);
+        Mech CataclysmScienceMech = director.construct(new StandardMechBuilder(), cataclysm, MechType.SCIENCE);
+        System.out.println(FlamePrimeMech);
+        System.out.println(SteelRangedMech);
+        System.out.println(CataclysmScienceMech);
     }
 }
